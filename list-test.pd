@@ -1,0 +1,8 @@
+#N canvas 1911 34 1842 932 12;
+#X obj 442 112 inlet;
+#X obj 442 144 route list;
+#X obj 443 179 list-drip;
+#X obj 445 215 print items;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

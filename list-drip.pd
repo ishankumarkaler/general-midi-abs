@@ -1,0 +1,26 @@
+#N canvas 1921 44 1822 912 12;
+#X obj 90 27 inlet;
+#X obj 93 176 list store;
+#X obj 71 90 until;
+#X obj 89 118 f;
+#X obj 119 118 + 1;
+#X msg 90 146 get \$1 1;
+#X obj 116 89 0;
+#X obj 95 219 outlet;
+#X obj 169 219 outlet;
+#X obj 89 60 t b b a;
+#X text 313 81 takes list/s as input and outputs elements of list from
+start to end \, outputs bang at end of each list.;
+#X connect 0 0 9 0;
+#X connect 1 0 7 0;
+#X connect 1 1 8 0;
+#X connect 1 1 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 3 1;
+#X connect 5 0 1 0;
+#X connect 6 0 3 1;
+#X connect 9 0 2 0;
+#X connect 9 1 6 0;
+#X connect 9 2 1 1;
