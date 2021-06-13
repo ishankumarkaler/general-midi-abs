@@ -1,0 +1,22 @@
+#N canvas -9 -9 1920 976 12;
+#X obj 195 127 inlet;
+#X obj 195 159 f \$2;
+#X floatatom 195 192 5 0 0 0 - - -;
+#X obj 1294 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1294 141 f \$1;
+#X floatatom 1294 165 5 0 0 0 - - -;
+#X obj 214 342 r \$2-notein;
+#X floatatom 214 375 5 0 0 0 - - -;
+#X text 1292 99 LOG(ignore): Clone instance number;
+#X obj 280 321 r \$2-polytouch;
+#X obj 346 298 r \$2-control;
+#X obj 412 275 r \$2-prgm;
+#X obj 478 256 r \$2-aftouch;
+#X obj 544 237 r \$2-pitch-bend;
+#X obj 610 214 r \$2-channel;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
