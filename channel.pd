@@ -18,24 +18,24 @@
 #X obj 96 391 outlet~;
 #X obj 226 391 outlet~;
 #N canvas -9 -9 1920 976 note-parser 0;
-#X obj 55 103 poly 32, f 10;
 #X obj 55 70 unpack f f;
 #X obj 55 132 pack f f f;
 #X obj 55 38 r \$0-notein;
 #X obj 55 156 s \$0-note-2-voice;
 #X obj 26 184 print note2voice;
-#X connect 0 0 2 0;
-#X connect 0 1 2 1;
-#X connect 0 2 2 2;
-#X connect 1 0 0 0;
-#X connect 1 1 0 1;
-#X connect 2 0 4 0;
-#X connect 2 0 5 0;
-#X connect 3 0 1 0;
+#X obj 55 103 poly 10 1, f 10;
+#X connect 0 0 5 0;
+#X connect 0 1 5 1;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 5 0 1 0;
+#X connect 5 1 1 1;
+#X connect 5 2 1 2;
 #X restore 96 276 pd note-parser;
 #N canvas 1911 34 1842 932 channel-subpatch 0;
 #X obj 100 50 r \$0-note-2-voice;
-#X obj 100 150 clone -s 1 pacman 10;
+#X obj 100 150 clone -s 1 pacmann 10;
 #X obj 100 200 throw~ \$0-voice-out-left;
 #X obj 300 200 throw~ \$0-voice-out-right;
 #X connect 0 0 1 0;
@@ -55,21 +55,33 @@
 -1 -1;
 #X floatatom 1686 349 5 0 0 0 - - -;
 #X obj 1686 325 f \$0;
-#X obj 990 33 loadbang;
+#X obj 989 35 loadbang;
 #X msg 1120 94 clear \, obj 100 50 r \\\$0-note-2-voice \, obj 100
 150 clone -s 1 pacman 10 \, obj 100 200 throw~ \\\$0-voice-out-left
 \, obj 300 200 throw~ \\\$0-voice-out-right \, connect 0 0 1 0 \, connect
 1 0 2 0 \, connect 1 0 3 0;
-#X obj 529 77 route voice-change;
 #X obj 990 94 print load-sucess;
-#X obj 529 177 s pd-channel-subpatch;
-#X msg 529 106 clear \, obj 100 50 r \\\$0-note-2-voice \, obj 100
+#X obj 527 367 s pd-channel-subpatch;
+#X obj 1072 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 531 77 route voice-change;
+#X obj 530 47 print in-channel;
+#X obj 704 101 print in-filter;
+#X msg 510 291 clear \, obj 100 50 r \\\$0-note-2-voice \, obj 100
 150 clone -s 1 \$1 10 \, obj 100 200 throw~ \\\$0-voice-out-left \,
 obj 300 200 throw~ \\\$0-voice-out-right \, connect 0 0 1 0 \, connect
 1 0 2 0 \, connect 1 0 3 0;
-#X obj 1072 26 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X msg 407 278 pacman;
+#X obj 531 137 t b s b;
+#X msg 577 162 clear \, obj 100 50 r \\\$0-note-2-voice;
+#X msg 554 184 obj 100 150 clone -s 1 \$1 10;
+#X msg 531 207 obj 100 200 throw~ \\\$0-voice-out-left \, obj 300 200
+throw~ \\\$0-voice-out-right \, connect 0 0 1 0 \, connect 1 0 2 0
+\, connect 1 0 3 0;
+#X obj 531 267 s pd-channel-subpatch;
+#X obj 531 101 list;
 #X connect 0 0 6 0;
+#X connect 0 0 30 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 6 0 12 0;
@@ -79,15 +91,24 @@ obj 300 200 throw~ \\\$0-voice-out-right \, connect 0 0 1 0 \, connect
 #X connect 6 3 9 0;
 #X connect 6 4 7 0;
 #X connect 6 5 8 0;
-#X connect 6 6 26 0;
+#X connect 6 6 29 0;
 #X connect 18 0 14 0;
 #X connect 18 1 15 0;
-#X connect 19 0 27 0;
+#X connect 19 0 26 0;
 #X connect 19 1 25 0;
 #X connect 21 0 23 0;
 #X connect 23 0 22 0;
 #X connect 24 0 19 0;
 #X connect 25 0 20 0;
-#X connect 26 0 29 0;
-#X connect 29 0 28 0;
-#X connect 30 0 19 0;
+#X connect 28 0 19 0;
+#X connect 29 0 31 0;
+#X connect 29 0 39 0;
+#X connect 32 0 27 0;
+#X connect 33 0 32 0;
+#X connect 34 0 37 0;
+#X connect 34 1 36 0;
+#X connect 34 2 35 0;
+#X connect 35 0 38 0;
+#X connect 36 0 38 0;
+#X connect 37 0 38 0;
+#X connect 39 0 34 0;
