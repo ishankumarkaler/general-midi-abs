@@ -1,8 +1,13 @@
-#N canvas 1911 34 1842 932 12;
+#N canvas -8 0 1842 932 12;
 #X obj 442 112 inlet;
 #X obj 442 144 route list;
 #X obj 443 179 list-drip;
 #X obj 445 215 print items;
+#X obj 486 344 scaler 127 0 1600 0;
+#X floatatom 486 312 5 0 0 0 - - -;
+#X floatatom 486 376 5 0 0 0 - - -;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
