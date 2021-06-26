@@ -1,4 +1,4 @@
-#N canvas -9 -9 1920 976 12;
+#N canvas -8 -8 1538 787 12;
 #X obj 101 18 inlet;
 #X obj 1616 304 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -17,7 +17,7 @@
 #X obj 24 101 print note;
 #X obj 96 391 outlet~;
 #X obj 226 391 outlet~;
-#N canvas -9 -9 1920 976 note-parser 0;
+#N canvas 0 0 1920 976 note-parser 0;
 #X obj 55 70 unpack f f;
 #X obj 55 132 pack f f f;
 #X obj 55 38 r \$0-notein;
@@ -41,7 +41,6 @@
 #X connect 2 0 0 0;
 #X connect 3 0 1 0;
 #X restore 97 351 pd channel-mod;
-#X f 19;
 #X obj 990 67 t b b, f 19;
 #X obj 1686 305 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -64,7 +63,7 @@
 #X obj 1120 165 s pd-channel-subpatch-\$0;
 #N canvas 1911 34 1842 944 channel-subpatch-\$0 0;
 #X obj 100 50 r \$0-note-2-voice;
-#X obj 100 150 clone -s 1 10 bell \$0;
+#X obj 100 150 clone -s 1 10 guitar \$0;
 #X connect 0 0 1 0;
 #X restore 96 311 pd channel-subpatch-\$0;
 #X obj 580 188 s pd-channel-subpatch-\$0;

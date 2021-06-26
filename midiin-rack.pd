@@ -1,5 +1,6 @@
 #N canvas -9 -9 1920 988 12;
-#X obj 1148 52 inlet;
+#X declare -path ./instruments;
+#X obj 1183 52 inlet;
 #X obj 1076 83 unpack f s;
 #X floatatom 1566 564 5 0 0 0 - - -;
 #X obj 1566 543 f \$0;
@@ -113,7 +114,8 @@
 #X obj 407 146 s \$0-pitch-bend;
 #X obj 530 147 s \$0-channel;
 #X text 634 20 TO_DO:;
-#X msg 1076 50 2 bell;
+#X obj 1281 171 declare -path ./instruments;
+#X msg 1076 50 1 guitar;
 #X connect 0 0 1 0;
 #X connect 1 0 68 0;
 #X connect 1 0 72 0;
@@ -236,4 +238,4 @@
 #X connect 105 1 106 0;
 #X connect 108 0 109 0;
 #X connect 108 1 110 0;
-#X connect 112 0 1 0;
+#X connect 113 0 1 0;
