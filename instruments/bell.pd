@@ -1,4 +1,4 @@
-#N canvas -8 -8 1538 787 12;
+#N canvas -8 0 1538 787 12;
 #X obj 486 201 line~;
 #X obj 486 137 del 50;
 #X obj 975 39 inlet;
@@ -28,7 +28,7 @@
 #X restore 975 63 pd midi-parsing;
 #X obj 311 40 unpack f f, f 18;
 #X obj 311 64 mtof;
-#N canvas 0 0 1920 976 bell~ 0;
+#N canvas 1 1 1900 968 bell~ 0;
 #X obj 96 130 osc~;
 #X obj 221 145 osc~;
 #X floatatom 1076 41 5 0 0 0 - - -;
@@ -40,8 +40,8 @@
 #X obj 784 134 osc~;
 #X obj 645 123 * 2;
 #X obj 784 106 * 2.5;
-#X obj 911 143 osc~;
-#X obj 911 115 * 3;
+#X obj 929 147 osc~;
+#X obj 929 119 * 3;
 #X obj 135 175 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 8890 1;
 #X obj 92 302 *~;
@@ -65,20 +65,20 @@
 #X obj 929 283 *~;
 #X obj 496 157 osc~;
 #X obj 1077 13 inlet;
-#X obj 323 530 outlet~;
+#X obj 91 492 outlet~;
 #X obj 96 71 r \$0-freq;
-#X obj 369 88 r \$0-freq;
+#X obj 369 96 r \$0-freq;
 #X obj 221 116 r \$0-freq;
-#X obj 495 93 r \$0-freq;
-#X obj 639 82 r \$0-freq;
+#X obj 496 100 r \$0-freq;
+#X obj 645 96 r \$0-freq;
 #X obj 783 71 r \$0-freq;
-#X obj 914 83 r \$0-freq;
+#X obj 929 86 r \$0-freq;
 #X obj 135 144 r \$0-gain1;
 #X obj 282 140 r \$0-gain2;
 #X obj 414 135 r \$0-gain3;
 #X obj 558 124 r \$0-gain4;
 #X obj 699 120 r \$0-gain5;
-#X obj 828 112 r \$0-gain6;
+#X obj 840 112 r \$0-gain6;
 #X obj 968 117 r \$0-gain7;
 #X obj 1203 59 loadbang;
 #X obj 1203 83 f \$0;
@@ -146,10 +146,8 @@
 #X obj 611 125 print sel-out;
 #X msg 433 89 0 500;
 #X obj 1103 34 loadbang;
-#X floatatom 1103 96 5 0 0 0 - - -;
 #X obj 406 300 throw~ \$2-voice-out-right;
 #X obj 308 346 throw~ \$2-voice-out-left;
-#X obj 1103 71 f \$2;
 #X connect 0 0 12 1;
 #X connect 1 0 14 0;
 #X connect 2 0 3 0;
@@ -165,9 +163,8 @@
 #X connect 9 1 15 0;
 #X connect 10 0 16 0;
 #X connect 10 1 9 0;
+#X connect 12 0 18 0;
 #X connect 12 0 19 0;
-#X connect 12 0 20 0;
 #X connect 13 0 0 0;
 #X connect 14 0 0 0;
 #X connect 16 0 0 0;
-#X connect 21 0 18 0;
