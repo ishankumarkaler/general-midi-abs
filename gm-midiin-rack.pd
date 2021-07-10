@@ -98,9 +98,9 @@
 #X obj 622 29 inlet;
 #X msg 622 53 raw-midi input through midi-file;
 #X obj 1014 9 inlet;
-#X msg 1046 82 read \$1;
-#X obj 1046 106 text define -k \$0-bank-file;
-#A set 1 guitar \; 2 bell \;;
+#X msg 1046 105 read \$1;
+#X obj 1046 129 text define -k \$0-bank-file;
+#A set;
 #X obj 1279 230 v debug-level;
 #N canvas 0 0 1920 988 \$0-load-from-file 0;
 #N canvas -9 -9 1920 988 \$0-read-file 0;
@@ -183,10 +183,10 @@
 #X connect 7 1 1 0;
 #X connect 7 2 9 0;
 #X connect 10 0 8 0;
-#X restore 1014 132 pd \$0-load-from-file;
-#X obj 1014 60 t b s;
+#X restore 1014 155 pd \$0-load-from-file;
+#X obj 1014 83 t b s;
 #X obj 1014 33 route file reload;
-#X obj 1130 55 s \$0-re-bang;
+#X obj 1129 92 s \$0-re-bang;
 #X obj 915 99 r \$0-re-bang;
 #X obj 1324 19 declare -path ./instruments;
 #X obj 802 144 print GM: file-name;
@@ -201,6 +201,7 @@
 #X obj 126 330 + 1;
 #X obj 230 353 print GM: channel;
 #X obj 24 376 print GM: port;
+#X obj 1014 57 list;
 #X connect 0 0 46 0;
 #X connect 0 1 48 2;
 #X connect 2 0 1 0;
@@ -288,9 +289,9 @@
 #X connect 97 0 98 0;
 #X connect 101 0 100 0;
 #X connect 101 1 97 0;
-#X connect 102 0 101 0;
 #X connect 102 0 106 0;
-#X connect 102 2 103 0;
+#X connect 102 0 118 0;
+#X connect 102 1 103 0;
 #X connect 104 0 100 0;
 #X connect 108 0 19 1;
 #X connect 109 0 21 1;
@@ -302,3 +303,4 @@
 #X connect 114 0 117 0;
 #X connect 115 0 81 0;
 #X connect 115 0 116 0;
+#X connect 118 0 101 0;

@@ -1,4 +1,4 @@
-#N canvas -8 0 1538 787 12;
+#N canvas 78 42 1523 772 12;
 #X obj 486 201 line~;
 #X obj 486 137 del 50;
 #X obj 975 39 inlet;
@@ -146,11 +146,13 @@
 #X obj 611 125 print sel-out;
 #X msg 433 89 0 500;
 #X obj 1103 34 loadbang;
-#X obj 406 300 throw~ \$2-voice-out-right;
-#X obj 308 346 throw~ \$2-voice-out-left;
+#X obj 883 103 print in-bell;
+#X obj 309 345 throw~ \$2-output-left-\$3;
+#X obj 406 300 throw~ \$2-output-right-\$3;
 #X connect 0 0 12 1;
 #X connect 1 0 14 0;
 #X connect 2 0 3 0;
+#X connect 2 0 18 0;
 #X connect 4 0 5 0;
 #X connect 4 1 10 0;
 #X connect 5 0 6 0;
@@ -163,8 +165,8 @@
 #X connect 9 1 15 0;
 #X connect 10 0 16 0;
 #X connect 10 1 9 0;
-#X connect 12 0 18 0;
 #X connect 12 0 19 0;
+#X connect 12 0 20 0;
 #X connect 13 0 0 0;
 #X connect 14 0 0 0;
 #X connect 16 0 0 0;
