@@ -1,4 +1,7 @@
 #N canvas -9 -9 1920 988 12;
 #X obj 450 336 gm-midiin-rack;
 #X msg 544 302 file bank.txt;
+#X text 696 278 Click this message box to run. We have to do that every
+time we close and run pd because \$0 value of patches change with time
+after reload.;
 #X connect 1 0 0 1;
