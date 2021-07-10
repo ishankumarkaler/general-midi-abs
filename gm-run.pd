@@ -1,0 +1,4 @@
+#N canvas -9 -9 1920 988 12;
+#X obj 450 336 gm-midiin-rack;
+#X msg 544 302 file bank.txt;
+#X connect 1 0 0 1;
