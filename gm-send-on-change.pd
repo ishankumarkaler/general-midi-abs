@@ -10,7 +10,6 @@
 #X obj 233 197 t b f;
 #X msg 241 126 clear;
 #X obj 233 91 t f b f, f 13;
-#X obj 123 222 bangonbang;
 #X obj 123 94 t b f f;
 #X obj 241 150 s \$0-clear;
 #X obj 47 180 r \$0-clear;
@@ -20,22 +19,23 @@
 Output the list only if atleast one or more value is different than
 the previous transmitted value. The default initialised value being
 [0 0];
+#X obj 123 222 gm-bangonbang;
 #X connect 0 0 1 0;
-#X connect 1 0 12 0;
+#X connect 1 0 11 0;
 #X connect 1 1 10 0;
 #X connect 2 0 8 0;
 #X connect 3 0 7 0;
 #X connect 4 0 5 0;
 #X connect 6 0 4 0;
-#X connect 7 0 11 1;
-#X connect 8 0 11 1;
-#X connect 9 0 13 0;
+#X connect 7 0 17 1;
+#X connect 8 0 17 1;
+#X connect 9 0 12 0;
 #X connect 10 0 2 0;
 #X connect 10 1 9 0;
 #X connect 10 2 4 1;
-#X connect 11 0 6 0;
-#X connect 12 0 11 0;
-#X connect 12 1 3 0;
-#X connect 12 2 15 0;
-#X connect 14 0 11 0;
-#X connect 16 0 6 1;
+#X connect 11 0 17 0;
+#X connect 11 1 3 0;
+#X connect 11 2 14 0;
+#X connect 13 0 17 0;
+#X connect 15 0 6 1;
+#X connect 17 0 6 0;
