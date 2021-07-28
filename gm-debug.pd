@@ -1,0 +1,21 @@
+#N canvas 1912 43 1840 934 12;
+#X obj 91 41 inlet;
+#X obj 91 191 list prepend \$2;
+#X text 540 57 Input: List/Number/symbol to be printed out;
+#X text 539 85 Output: Input is printed out \, according to the debug
+level variable;
+#X obj 91 65 t f b b;
+#X obj 114 116 f \$1;
+#X obj 114 141 <=, f 7;
+#X obj 91 166 spigot;
+#X obj 91 215 print;
+#X obj 138 89 v global-debug-lvl;
+#X connect 0 0 4 0;
+#X connect 1 0 8 0;
+#X connect 4 0 7 0;
+#X connect 4 1 5 0;
+#X connect 4 2 9 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 1;
+#X connect 7 0 1 0;
+#X connect 9 0 6 1;
