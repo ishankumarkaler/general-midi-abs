@@ -1,0 +1,134 @@
+#N canvas 1911 34 1842 944 12;
+#X obj 199 63 inlet;
+#X symbolatom 199 87 10 0 0 0 - - -;
+#X obj 199 110 list fromsymbol;
+#X obj 470 96 array define -k \$0-path-arr 1000;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 470 43 loadbang;
+#X msg 470 72 const 0;
+#X obj 301 159 s \$0-clear-arr;
+#X obj 250 213 array set \$0-path-arr;
+#X obj 199 134 t b l b, f 15;
+#X obj 250 161 t l b;
+#X msg 282 185 0;
+#X obj 536 43 r \$0-clear-arr;
+#N canvas -9 -9 1920 988 get-path 0;
+#X obj 16 15 inlet;
+#X obj 16 39 t b f, f 12;
+#N canvas -9 -9 1920 988 get-index 0;
+#X obj 32 157 until;
+#X obj 32 113 t b f;
+#X obj 32 193 f, f 9;
+#X obj 32 85 spigot, f 8;
+#X obj 32 34 t f f, f 8;
+#X obj 85 59 >= 0;
+#X obj 106 165 sel -1;
+#X obj 107 134 - 1;
+#X obj 32 217 t f f, f 6;
+#X obj 32 294 array get \$0-path-arr;
+#X msg 118 267 1;
+#X obj 32 364 sel;
+#X obj 50 341 r \$0-ascii-val;
+#X obj 32 421 f;
+#X obj 32 388 t b b;
+#X obj 32 7 inlet;
+#X obj 32 445 outlet;
+#X obj 32 241 t f b f, f 25;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 2 1;
+#X connect 2 0 8 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 4 1 5 0;
+#X connect 5 0 3 1;
+#X connect 6 0 0 1;
+#X connect 7 0 2 1;
+#X connect 7 0 6 0;
+#X connect 8 0 17 0;
+#X connect 8 1 7 0;
+#X connect 9 0 11 0;
+#X connect 10 0 9 1;
+#X connect 11 0 14 0;
+#X connect 12 0 11 1;
+#X connect 13 0 16 0;
+#X connect 14 0 13 0;
+#X connect 14 1 0 1;
+#X connect 15 0 4 0;
+#X connect 17 0 9 0;
+#X connect 17 1 10 0;
+#X connect 17 2 13 1;
+#X restore 97 63 pd get-index;
+#X obj 16 162 array get \$0-path-arr;
+#X obj 16 186 list tosymbol;
+#X obj 16 210 outlet;
+#X obj 16 133 spigot 0;
+#X obj 97 87 t b f;
+#X obj 129 110 + 1;
+#X msg 97 111 1;
+#X msg 16 63 0;
+#X connect 0 0 1 0;
+#X connect 1 0 10 0;
+#X connect 1 1 2 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 3 0;
+#X connect 7 0 9 0;
+#X connect 7 1 8 0;
+#X connect 8 0 3 1;
+#X connect 9 0 6 1;
+#X connect 10 0 6 0;
+#X restore 199 289 pd get-path;
+#X obj 473 134 loadbang;
+#X msg 473 158 47;
+#X obj 473 182 s \$0-ascii-val;
+#X obj 199 244 array size \$0-path-arr;
+#X obj 199 266 - 1;
+#X obj 199 313 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 8 0 16 0;
+#X connect 8 1 9 0;
+#X connect 8 2 6 0;
+#X connect 9 0 7 0;
+#X connect 9 1 10 0;
+#X connect 10 0 7 1;
+#X connect 11 0 5 0;
+#X connect 12 0 18 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 17 0 12 0;
