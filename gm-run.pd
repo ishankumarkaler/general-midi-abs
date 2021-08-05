@@ -1,7 +1,15 @@
 #N canvas -9 -9 1920 988 12;
-#X obj 354 344 gm-midiin-rack;
-#X text 696 278 Click this message box to run. We have to do that every
+#X obj 173 338 gm-midiin-rack;
+#X text 507 282 Click this message box to run. We have to do that every
 time we close and run pd because \$0 value of patches change with time
 after reload.;
-#X msg 448 310 file ./instruments/bank.txt;
+#X msg 294 303 file ./instruments/bank.txt;
+#X msg 268 215 open;
+#X text 320 212 Opens file browser. Select bank file in any directory.
+the instruments should be in same directory as bank file.;
+#X text 478 371 NOTE: Please wait for LOADED SUCCESSFULLY message in
+console before playing. Loading time varies with no. of instruments
+loaded \, polyphony and processing speed of your system. Typically
+it should take few seconds.;
 #X connect 2 0 0 1;
+#X connect 3 0 0 1;
