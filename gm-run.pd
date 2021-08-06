@@ -11,5 +11,8 @@ the instruments should be in same directory as bank file.;
 console before playing. Loading time varies with no. of instruments
 loaded \, polyphony and processing speed of your system. Typically
 it should take few seconds.;
+#X obj 173 375 dac~;
+#X connect 0 0 6 0;
+#X connect 0 1 6 1;
 #X connect 2 0 0 1;
 #X connect 3 0 0 1;
