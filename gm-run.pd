@@ -14,5 +14,5 @@ it should take few seconds.;
 #X obj 64 235 dac~;
 #X connect 0 0 6 0;
 #X connect 0 1 6 1;
-#X connect 2 0 0 1;
-#X connect 3 0 0 1;
+#X connect 2 0 0 2;
+#X connect 3 0 0 2;
