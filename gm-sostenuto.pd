@@ -11,8 +11,8 @@
 1;
 #X obj 305 33 t f f;
 #X msg 463 146 0;
-#X obj 305 147 moses 1;
-#X obj 305 240 s \$0-fflush;
+#X obj 305 171 moses 1;
+#X obj 305 239 s \$0-fflush;
 #X obj 37 166 s \$0-fflush;
 #X obj 559 321 > 0;
 #X obj 559 343 t f f;
@@ -23,21 +23,20 @@
 #X obj 586 363 + 1;
 #X obj 586 385 mod 2;
 #X obj 464 194 loadbang;
-#X obj 332 55 == 66;
 #X obj 305 124 >= 66;
 #X obj 489 76 array define -k \$0-suste-notes 100;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#A 0 44 45 44 49 45 55 55 51 45 39 22 60 54 58 83 70 62 17 37 46 33
+59 55 42 52 55 49 50 47 45 50 58 45 54 52 61 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0;
-#X obj 344 171 s \$0-suste-state;
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X obj 344 191 s \$0-suste-state;
 #X obj 37 41 route flush;
-#X obj 181 50 r \$0-suste-state;
-#X obj 100 73 list prepend 0;
-#X obj 100 95 route 0 1;
+#X obj 181 41 r \$0-suste-state;
+#X obj 100 64 list prepend 0;
+#X obj 100 86 route 0 1;
 #X obj 37 282 outlet;
 #X obj 37 253 r \$0-to-outlet;
-#X obj 126 122 s \$0-to-outlet;
+#X obj 126 113 s \$0-to-outlet;
 #X msg 464 216 100;
 #N canvas -9 -9 1920 988 set-at-cur-index 0;
 #X obj 35 3 inlet;
@@ -86,7 +85,7 @@
 #X connect 19 0 18 0;
 #X connect 20 0 1 0;
 #X connect 20 1 21 0;
-#X restore 100 142 pd set-at-cur-index;
+#X restore 100 133 pd set-at-cur-index;
 #X obj 38 201 r \$0-fflush;
 #N canvas -9 -9 1920 988 flush-notes-offs 0;
 #X obj 37 37 inlet;
@@ -147,6 +146,12 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 38 254 pd update-array-variables;
+#X obj 332 28 inlet;
+#X obj 407 149 gm-array-looper;
+#X obj 407 121 pack 0 f;
+#X obj 407 74 t b b;
+#X obj 434 95 v \$0-suste-index;
+#X obj 332 50 t b f, f 13;
 #X connect 0 0 1 0;
 #X connect 1 0 10 0;
 #X connect 1 1 4 0;
@@ -158,33 +163,42 @@
 #X connect 6 0 8 0;
 #X connect 6 1 7 0;
 #X connect 7 0 9 0;
+#X connect 11 0 16 0;
+#X connect 13 0 12 0;
+#X connect 14 0 13 0;
+#X connect 14 1 15 0;
+#X connect 15 0 13 1;
+#X connect 16 1 14 0;
 #X restore 38 223 pd flush-notes-offs;
 #X obj 462 98 array define -k \$0-suste-voices 100;
-#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0;
+#A 0 44 45 44 49 45 55 55 51 45 39 22 60 54 58 83 70 62 17 37 46 33
+59 55 42 52 55 49 50 47 45 50 58 45 54 52 61 51 44 43 47 49 52 47 52
+36 50 60 45 16 1 42 31 31 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X obj 463 169 v \$0-suste-index;
 #X obj 464 240 v \$0-suste-size;
-#X obj 305 194 t b f;
+#X obj 305 199 t b f;
 #X obj 332 219 s \$0-suste-state;
+#X text 378 56 66;
+#X obj 332 55 == 41;
+#X obj 305 146 change 0;
 #X connect 0 0 9 0;
-#X connect 1 0 27 0;
+#X connect 1 0 26 0;
 #X connect 2 0 18 0;
 #X connect 2 1 18 1;
 #X connect 2 2 14 0;
 #X connect 3 0 6 0;
 #X connect 4 0 3 0;
 #X connect 5 0 10 0;
-#X connect 6 0 38 0;
-#X connect 6 1 25 0;
-#X connect 7 0 24 0;
+#X connect 6 0 37 0;
+#X connect 6 1 24 0;
+#X connect 7 0 23 0;
 #X connect 8 0 7 1;
 #X connect 9 0 7 0;
-#X connect 9 1 23 0;
-#X connect 10 0 39 0;
-#X connect 11 0 41 0;
-#X connect 11 1 26 0;
+#X connect 9 1 43 0;
+#X connect 10 0 38 0;
+#X connect 11 0 40 0;
+#X connect 11 1 25 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 1;
 #X connect 15 1 20 0;
@@ -193,17 +207,18 @@
 #X connect 19 1 17 0;
 #X connect 20 0 21 0;
 #X connect 21 0 17 1;
-#X connect 22 0 34 0;
-#X connect 23 0 8 0;
-#X connect 24 0 11 0;
-#X connect 27 0 13 0;
-#X connect 27 1 29 0;
-#X connect 28 0 29 1;
-#X connect 29 0 30 0;
-#X connect 30 0 35 0;
-#X connect 30 1 33 0;
-#X connect 32 0 31 0;
-#X connect 34 0 40 0;
-#X connect 36 0 37 0;
-#X connect 41 0 12 0;
-#X connect 41 1 42 0;
+#X connect 22 0 33 0;
+#X connect 23 0 44 0;
+#X connect 26 0 13 0;
+#X connect 26 1 28 0;
+#X connect 27 0 28 1;
+#X connect 28 0 29 0;
+#X connect 29 0 34 0;
+#X connect 29 1 32 0;
+#X connect 31 0 30 0;
+#X connect 33 0 39 0;
+#X connect 35 0 36 0;
+#X connect 40 0 12 0;
+#X connect 40 1 41 0;
+#X connect 43 0 8 0;
+#X connect 44 0 11 0;
