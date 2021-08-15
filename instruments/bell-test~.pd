@@ -1,6 +1,6 @@
-#N canvas -9 -9 1920 988 12;
+#N canvas 0 0 1522 772 12;
 #X obj 53 18 inlet;
-#N canvas -9 -9 1920 988 midi-parsing 0;
+#N canvas 0 0 1920 988 midi-parsing 0;
 #X obj 37 37 inlet;
 #X obj 37 105 s \$0-note;
 #X obj 156 302 unpack f f;
@@ -20,12 +20,11 @@
 #X obj 399 176 s \$2-switch-on-\$3-\$1;
 #X obj 37 78 t l l l l, f 52;
 #X obj 278 129 mtof;
-#X obj 278 300 throw~ \$0-freq;
 #X obj 278 103 unpack f f;
 #X obj 278 177 line~;
 #X msg 278 153 \$1 5;
-#X obj 315 406 outlet~;
-#N canvas -9 -9 1920 988 vel-norm 0;
+#X obj 280 280 outlet~;
+#N canvas 0 0 1920 988 vel-norm 0;
 #X obj 11 8 inlet;
 #X obj 11 62 * 0.007874;
 #X obj 11 90 s \$0-vel-norm;
@@ -48,14 +47,13 @@
 #X connect 9 0 10 0;
 #X connect 11 0 1 0;
 #X connect 11 1 2 0;
-#X connect 11 2 14 0;
+#X connect 11 2 13 0;
 #X connect 11 3 6 0;
-#X connect 12 0 16 0;
-#X connect 14 0 12 0;
-#X connect 14 1 18 0;
-#X connect 15 0 13 0;
-#X connect 15 0 17 0;
-#X connect 16 0 15 0;
+#X connect 12 0 15 0;
+#X connect 13 0 12 0;
+#X connect 13 1 17 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
 #X restore 53 67 pd midi-parsing;
 #X obj 53 314 throw~ \$2-output-left-\$3;
 #X obj 141 289 throw~ \$2-output-right-\$3;
@@ -69,26 +67,26 @@
 #X obj 644 267 osc~;
 #X obj 783 250 osc~;
 #X obj 931 234 osc~;
-#X obj 134 291 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8890 1;
+#X obj 134 291 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 8890 1;
 #X obj 91 418 *~;
-#X obj 281 284 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7620 1;
+#X obj 281 284 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 7620 1;
 #X obj 221 412 *~;
-#X obj 414 278 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3810 1;
+#X obj 414 278 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 3810 1;
 #X obj 367 396 *~;
-#X obj 557 276 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3810 1;
+#X obj 557 276 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 3810 1;
 #X obj 497 403 *~;
-#X obj 698 266 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3810 1;
+#X obj 698 266 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 3810 1;
 #X obj 643 393 *~;
-#X obj 839 260 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3810 1;
+#X obj 839 260 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 3810 1;
 #X obj 785 386 *~;
-#X obj 973 250 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3810 1;
+#X obj 973 250 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 3810 1;
 #X obj 931 370 *~;
 #X obj 495 273 osc~;
 #X obj 90 608 outlet~;
@@ -104,8 +102,8 @@
 #X msg 1203 107 \; \$1-gain1 0.7 \; \$1-gain2 0.6 \; \$1-gain3 0.3
 \; \$1-gain4 0.3 \; \$1-gain5 0.3 \; \$1-gain6 0.3 \; \$1-gain7 0.3
 ;
-#X obj 1297 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 1297 39 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 95 214 *~ 0.5;
 #X obj 368 241 *~ 1.2;
 #X obj 495 243 *~ 1.5;
@@ -186,7 +184,7 @@
 #X connect 13 0 2 0;
 #X connect 14 0 5 0;
 #X restore 53 94 pd bell-voice;
-#N canvas -9 -9 1920 988 ramps 0;
+#N canvas 0 0 1920 988 ramps 0;
 #X obj 62 278 *~;
 #X obj 129 247 line~;
 #X msg 168 207 0 5;
@@ -222,7 +220,6 @@
 #X connect 16 0 1 0;
 #X connect 17 0 7 0;
 #X restore 53 263 pd ramps;
-#X f 13;
 #N canvas 0 50 450 459 check-voice-availability 0;
 #X obj 37 37 inlet;
 #X obj 37 208 outlet;
@@ -230,7 +227,7 @@
 #X obj 118 89 v \$0-env-state;
 #X obj 37 115 list prepend;
 #X obj 37 139 route 0 1, f 12;
-#N canvas -9 -9 1920 988 backtrack-note 0;
+#N canvas 0 0 1920 988 backtrack-note 0;
 #X obj 19 10 inlet;
 #X obj 19 34 unpack f f;
 #X obj 19 229 outlet;
@@ -262,7 +259,7 @@
 #X connect 5 1 6 0;
 #X connect 6 0 1 0;
 #X restore 53 43 pd check-voice-availability;
-#N canvas -9 -9 1920 988 envelope-switch 0;
+#N canvas 0 0 1920 988 envelope-switch 0;
 #X obj 26 34 /~ 2;
 #X obj 26 85 moses 10, f 16;
 #X obj 26 187 v \$0-env-state;
