@@ -2,7 +2,7 @@
 #X text 398 142 Click this message box to run. We have to do that every
 time we close and run pd because \$0 value of patches change with time
 after reload.;
-#X msg 185 163 file ./instruments/bank.txt;
+#X msg 152 142 file ./instruments/bank.txt;
 #X msg 159 75 open;
 #X text 211 72 Opens file browser. Select bank file in any directory.
 the instruments should be in same directory as bank file.;
@@ -11,10 +11,12 @@ console before playing. Loading time varies with no. of instruments
 loaded \, polyphony and processing speed of your system. Typically
 it should take few seconds.;
 #X obj 64 235 dac~;
-#X msg 101 89 bang;
 #X obj 64 198 gm-rack;
-#X connect 1 0 7 2;
-#X connect 2 0 7 2;
-#X connect 6 0 7 1;
-#X connect 7 0 5 0;
-#X connect 7 1 5 1;
+#X msg 78 59 record;
+#X msg 92 86 stop;
+#X connect 1 0 6 2;
+#X connect 2 0 6 2;
+#X connect 6 0 5 0;
+#X connect 6 1 5 1;
+#X connect 7 0 6 1;
+#X connect 8 0 6 1;
