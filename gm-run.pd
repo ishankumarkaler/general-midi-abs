@@ -1,26 +1,31 @@
 #N canvas -8 0 958 956 12;
-#X text 398 142 Click this message box to run. We have to do that every
+#X text 324 120 Click this message box to run. We have to do that every
 time we close and run pd because \$0 value of patches change with time
 after reload.;
-#X msg 106 161 file ./instruments/bank.txt;
+#X msg 109 140 file ./instruments/bank.txt;
 #X msg 110 183 open;
-#X text 211 72 Opens file browser. Select bank file in any directory.
+#X text 163 174 Opens file browser. Select bank file in any directory.
 the instruments should be in same directory as bank file.;
-#X text 369 231 NOTE: Please wait for LOADED SUCCESSFULLY message in
+#X text 282 223 NOTE: Please wait for LOADED SUCCESSFULLY message in
 console before playing. Loading time varies with no. of instruments
 loaded \, polyphony and processing speed of your system. Typically
 it should take few seconds.;
-#X obj 66 246 dac~;
+#X obj 61 326 dac~;
 #X obj 66 209 gm-rack;
 #X msg 80 0 record;
 #X msg 88 24 stop;
 #X msg 96 52 read midseq.txt;
 #X msg 103 78 play;
+#X obj 65 272 *~;
+#X obj 119 242 hsl 128 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
 #X connect 1 0 6 2;
 #X connect 2 0 6 2;
-#X connect 6 0 5 0;
-#X connect 6 1 5 1;
+#X connect 6 0 11 0;
 #X connect 7 0 6 1;
 #X connect 8 0 6 1;
 #X connect 9 0 6 1;
 #X connect 10 0 6 1;
+#X connect 11 0 5 0;
+#X connect 11 0 5 1;
+#X connect 12 0 11 1;

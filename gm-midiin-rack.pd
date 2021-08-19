@@ -1,4 +1,4 @@
-#N canvas 1911 -9 1862 934 12;
+#N canvas -9 -9 1920 966 12;
 #X declare -path C:/Users/kumar/OneDrive/Documents/purrdata/general-midi-abs/instruments/
 ;
 #X declare -path ./instruments;
@@ -292,7 +292,7 @@ a time.;
 #X connect 10 1 5 0;
 #X connect 12 0 1 0;
 #X restore 545 63 pd extern-midi;
-#N canvas 0 0 1920 988 sequencing-and-recording 1;
+#N canvas 0 0 1920 988 sequencing-and-recording 0;
 #X obj 67 10 inlet;
 #X obj 642 7 loadbang;
 #X msg 642 31 0;
