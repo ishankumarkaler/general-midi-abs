@@ -1,31 +1,38 @@
-#N canvas -8 0 958 956 12;
-#X text 324 120 Click this message box to run. We have to do that every
+#N canvas 0 0 1522 754 12;
+#X text 347 248 Click this message box to run. We have to do that every
 time we close and run pd because \$0 value of patches change with time
 after reload.;
-#X msg 109 140 file ./instruments/bank.txt;
-#X msg 110 183 open;
-#X text 163 174 Opens file browser. Select bank file in any directory.
+#X msg 140 271 file ./instruments/bank.txt;
+#X msg 156 296 open;
+#X text 208 289 Opens file browser. Select bank file in any directory.
 the instruments should be in same directory as bank file.;
-#X text 282 223 NOTE: Please wait for LOADED SUCCESSFULLY message in
+#X text 285 348 NOTE: Please wait for LOADED SUCCESSFULLY message in
 console before playing. Loading time varies with no. of instruments
 loaded \, polyphony and processing speed of your system. Typically
 it should take few seconds.;
-#X obj 61 326 dac~;
-#X obj 66 209 gm-rack;
-#X msg 80 0 record;
-#X msg 88 24 stop;
-#X msg 96 52 read midseq.txt;
-#X msg 103 78 play;
-#X obj 65 272 *~;
-#X obj 119 242 hsl 128 15 0 5 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+#X obj 68 390 dac~;
+#X obj 68 349 gm-rack, f 16;
+#X msg 103 149 record;
+#X msg 111 173 stop;
+#X msg 119 201 read midseq.txt;
+#X msg 126 227 play;
+#X msg 177 326 close;
+#X msg 80 54 play;
+#X msg 72 30 open;
+#X msg 88 78 pause;
+#X msg 94 102 continue;
+#X msg 64 8 file ./midi-files/python.mid;
 #X connect 1 0 6 2;
 #X connect 2 0 6 2;
-#X connect 6 0 11 0;
+#X connect 6 0 5 0;
+#X connect 6 1 5 1;
 #X connect 7 0 6 1;
 #X connect 8 0 6 1;
 #X connect 9 0 6 1;
 #X connect 10 0 6 1;
-#X connect 11 0 5 0;
-#X connect 11 0 5 1;
-#X connect 12 0 11 1;
+#X connect 11 0 6 3;
+#X connect 12 0 6 0;
+#X connect 13 0 6 0;
+#X connect 14 0 6 0;
+#X connect 15 0 6 0;
+#X connect 16 0 6 0;

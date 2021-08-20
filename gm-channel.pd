@@ -73,9 +73,6 @@ channel volume \, applying pan effect before sending to outlet, f
 #X msg 2126 586 obj 100 150 clone -s 1 32 \$1 \\\$0 \, bang;
 #N canvas 1 1 1900 968 voice-\$0-1 0;
 #N canvas -9 -9 1920 988 voice-clone-\$0-1 0;
-#X obj 100 50 r 1013-to-clone-1;
-#X obj 100 150 clone -s 1 16 bell-test~ \$0 1;
-#X connect 0 0 1 0;
 #X restore 124 96 pd voice-clone-\$0-1;
 #X obj 124 319 throw~ \$0-voice-out-left;
 #X obj 465 317 throw~ \$0-voice-out-right;
@@ -327,9 +324,6 @@ channel volume \, applying pan effect before sending to outlet, f
 ;
 #N canvas 1 1 1900 968 voice-\$0-2 0;
 #N canvas 309 245 450 300 voice-clone-\$0-2 0;
-#X obj 100 50 r 1013-to-clone-2;
-#X obj 100 150 clone -s 1 16 bell-test~ \$0 2;
-#X connect 0 0 1 0;
 #X restore 126 84 pd voice-clone-\$0-2;
 #X obj 124 318 throw~ \$0-voice-out-left;
 #X obj 463 331 throw~ \$0-voice-out-right;
@@ -654,8 +648,8 @@ to reduce clicks. Also update the current voice to current voice variable(\$0-cu
 #X connect 4 0 5 0;
 #X connect 6 0 1 0;
 #X connect 7 0 1 0;
-#X restore 1324 149 pd clear-subpatch;
-#X msg 1369 111 bang;
+#X restore 1324 159 pd clear-subpatch;
+#X msg 1324 134 bang;
 #X obj 1324 110 inlet;
 #X obj 428 534 print pitch-bend;
 #X obj 428 510 r \$0-pitch-bend;
@@ -723,5 +717,5 @@ to reduce clicks. Also update the current voice to current voice variable(\$0-cu
 #X connect 84 0 83 0;
 #X connect 85 0 58 0;
 #X connect 91 0 90 0;
-#X connect 92 0 90 0;
+#X connect 92 0 91 0;
 #X connect 94 0 93 0;
